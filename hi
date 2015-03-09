@@ -1,0 +1,26 @@
+declare module Kiwi {
+    /**
+    * The base class that is used when you create a new Game. Handles the initialisation of all of the various individual game managers and holds the RAF (RequestAnimationFrame object) which is used for the game loop.
+    *
+    * @class Game
+    * @namespace Kiwi
+    * @constructor
+    * @param [domParent=''] {String} The ID of a DOM element that the game should use as its 'container'. If you are targeting Cocoon then you don't need to worry about this and can leave it blank.
+    * @param [name='KiwiGame'] {String} The name of the game that is being created.
+    * @param [state=null] {Any} The state to load initially. This can either be the name of a state, but preferably this would be the state object itself.
+    * @param [options] {Object} Any special options for the game. E.g. Is DEBUG_ON or DEBUG_OFF, RENDERER_CANVAS or RENDERER_WEBGL, TARGET_BROWSER or TARGET_COCOON
+    *   @param [options.debug=Kiwi.DEBUG_ON] {Number} If debugging is enabled or not.
+    *   @param [options.bootCallback=null] {Function} A callback to be executed when the game reaches the boot stage.
+    *   @param [options.deviceTarget=Kiwi.TARGET_BROWSER] {Number} The type of device Kiwi is being used on.
+    *   @param [options.renderer=Kiwi.RENDERER_AUTO] {Number} The renderer Kiwi should use.
+    *   @param [options.width=Kiwi.Stage.DEFAULT_WIDTH] {Number} The width of this instance of Kiwi.
+    *   @param [options.height=Kiwi.Stage.DEFAULT_HEIGHT] {Number} The height of this instance of Kiwi.
+    *   @param [options.scaleType=Kiwi.Stage.SCALE_NONE] {Number} The type of scaling that should be applied to Kiwi.
+    *   @param [options.plugins=[]] {Array} A list of the names of plugins that are to be used with this game.
+    *   @param [options.log] {Object} Default state of the Log properties
+    *       @param [options.log.recording=true] {Boolean} If the logs should be recorded.
+    *       @param [options.log.display=true] {Boolean} If the logs should be displayed or not.
+    *       @param [options.log.enabled=true] {Boolean} If the Logger is enabled at all.
+    *       @param [options.log.maxRecordings=Infinity] {Number} The maximum number of recordings to have at a single time.
+    * @return {Kiwi.Game}
+    
